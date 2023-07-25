@@ -1,0 +1,41 @@
+.post-list-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .addpost{
+    display: flex;
+    justify-content: flex-end;
+    /* right: 500px; */
+  }
+  .addButton{
+    margin-right: 400px;
+    /* right: */
+  }
+  .post-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .post-card {
+    width: 600px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+.post-title {
+    flex-grow: 1;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .menu-button {
+    float:left;
+    width: 40px;
+    height: 40px;
+  }
+
+  

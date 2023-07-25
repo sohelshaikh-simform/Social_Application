@@ -1,0 +1,45 @@
+<h2 class="post-list-heading">Post List</h2>
+<hr>
+<div class="addpost">
+  <button mat-raised-button color="accent" class="addButton" (click)="addPost()">Add Post</button>
+</div>
+
+<div class="post-container">
+
+    <mat-card class="post-card" *ngFor="let post of posts">
+
+        <a [routerLink]="['/posts',post._id]" class="post-title"
+            routerLinkActive="router-link-active">{{post.title|titlecase}}</a>
+        <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
+        <button
+          mat-icon-button
+          color="primary"
+          class="menu-button"
+          [matMenuTriggerFor]="menu"
+        >
+          <mat-icon>more_vert</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="updatePost(post._id)">
+                <mat-icon>edit</mat-icon>
+                <span>Edit Post</span>
+            </button>
+            <button mat-menu-item (click)="deletePost(post._id)">
+                <mat-icon>delete</mat-icon>
+                <span>Delete Post</span>
+            </button>
+        </mat-menu>
+        <mat-card-actions align="end">
+            <button
+              mat-icon-button
+              color="accent"
+              (click)="addComment(post._id)"
+            >
+              <mat-icon>comment</mat-icon>
+            </button>
+          </mat-card-actions>
+        
+    </mat-card>
+
+</div>

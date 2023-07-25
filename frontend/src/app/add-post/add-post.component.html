@@ -1,0 +1,17 @@
+<mat-card class="addPost">
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="title" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea matInput [(ngModel)]="body"></textarea>
+  </mat-form-field>
+
+  <div class="btns">
+
+    <button mat-raised-button color="accent" (click)="addPost()">Add Post</button>
+    <button mat-raised-button color="primary" (click)="cancle()">Cancle</button>
+  </div>
+
+</mat-card>

@@ -1,0 +1,35 @@
+<mat-card class="example-card" *ngIf="posts">
+  <mat-card-header>
+    <mat-card-title>{{ posts.title | titlecase }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ posts.body }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-list>
+      <mat-list-item *ngFor="let item of userComment">
+        <button mat-icon-button color="warn">
+          <mat-icon>favorite</mat-icon></button>
+          {{ item }}</mat-list-item>
+    </mat-list>
+  </mat-card-actions>
+  <mat-card-actions align="end">
+    <button
+      mat-raised-button
+      color="accent"
+      class="gobackBtn"
+      (click)="goBack()"
+    >
+      Go Back
+    </button>
+  </mat-card-actions>
+</mat-card>
+
+<!-- <ul *ngIf="posts">
+    {{posts.body}}
+    <ul *ngFor="let comment of userComment">
+        <li>
+            {{comment}}
+        </li>
+    </ul>
+</ul>-->

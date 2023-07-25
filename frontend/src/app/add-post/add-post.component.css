@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.addPost{
+  width: 300px;
+}
+textarea {
+  resize: none;
+}
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
